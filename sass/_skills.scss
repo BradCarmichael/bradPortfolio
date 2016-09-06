@@ -1,0 +1,76 @@
+
+
+.skills h3 {
+	text-align: center;
+	padding-bottom: 30px;
+	padding-top: 100px;
+}
+
+.skills .main {
+	    padding-bottom: 110px;
+}
+
+.skills-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.skills-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.icon-wrap {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(25% - 40px);
+    justify-content: flex-start;
+    margin: 20px;
+    flex-direction: column;
+  	h4 {
+    	padding-top: 20px;
+    }
+}
+
+.icon-title-wrap {
+	padding-top: 20px;
+}
+
+.devicons {
+	font-size: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid $primary;
+	border-radius: 5px;
+    padding: 10px;
+    background-color: $primary;
+    color: white;
+    transition: background-color .2s;
+}
+
+@media (max-width: 768px) {
+	.icon-wrap {
+		width: 25%;
+	}
+}
+
+@media (max-width: 400px) {
+	.icon-wrap {
+		width: 25%;
+	}
+	.icon {
+		padding-bottom: 20px;
+	}
+	.icon-wrap h4  {
+		padding: 0px 3px;
+	}
+
+} 

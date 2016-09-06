@@ -26,7 +26,8 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'secondary' => 'Secondary Navigation'
 	) );
 
 	/*
@@ -51,6 +52,14 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+	wp_enqueue_style('devicon', 'https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css');
+
+	wp_enqueue_style('animate', 'https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css');
+
+	wp_enqueue_style('smoothscroll', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js');
+
+	wp_enqueue_style('scrollReveal', 'https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -180,6 +189,15 @@ function hackeryou_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 
+	register_sidebar( array(
+		'name' => 'Secondary Widget Area',
+		'id' => 'secondary-widget-area',
+		'description' => 'The secondary widget area',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 
 add_action( 'widgets_init', 'hackeryou_widgets_init' );
@@ -281,3 +299,14 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+/* creates a dynamic featured image */
+function hackeryou_featured_image_url($post) {
+	// pre_r($post);
+	$image_id = get_post_thumbnail_id($post->ID);
+	$image_url = wp_get_attachment_url($image_id);
+
+	return $image_url;
+}
+
+show_admin_bar(false);

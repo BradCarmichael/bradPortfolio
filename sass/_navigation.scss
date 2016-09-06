@@ -1,14 +1,122 @@
-ul.menu {
+
+.nav-wrap {
+    padding: 20px;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%; 
+	box-shadow: 0 0px 6px rgba(0,0,0,.2);
+}
+
+.nav-container {
+	display: flex;
+    justify-content: space-between;
+    max-width: 1040px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.title-nav-wrap {
+	display: flex;
+}
+
+.title-nav-box {
+	z-index: 100;
+}
+.title-nav-box a {
+    font-size: 30px;
+    color: #179cac;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.nav-wrap-padding {
+	padding-top: 107px;
+}
+
+#menu-primary-nav-menu {
 	margin: 0;
 	padding: 0;
 	li {
 		display: inline;
 		margin-right: 10px;
+		font-size: 16px;
+		font-family: 'Roboto', sans-serif;
 		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
-			color: white;
+			padding: 0px 0px;
+			text-decoration: none;
+			color: black;
+			border-bottom: 1px solid transparent;
+			padding-bottom: 10px;
+			transition: border-bottom .3s;
 		}
 	}
 }
+
+#menu-primary-nav-menu li a:hover {
+	padding: 0px 0px;
+    text-decoration: none;
+    color: #179cac;
+    // margin: 0px 35px 0px 0px;
+    border-bottom: 1px solid #179cac;
+    padding-bottom: 10px;
+}
+
+.hamburger {
+	display: none;
+	font-size: 40px;
+	left: 40px;
+	position: relative;
+	cursor: pointer;
+}
+
+
+@media (max-width: 768px){
+	.title-nav-box a {
+		font-size: 25px;
+	}
+	#menu-primary-nav-menu li {
+		margin-right: 0px;
+		padding: 0 5px 20px;
+	}
+}
+
+@media (max-width: 600px) {
+		.hamburger {
+		  display: block;
+		  text-align: left;
+		  margin-right: 50px;
+		  z-index: 20;
+		  color: #179cac;
+		}
+		#menu-primary-nav-menu {
+		  display: none;
+		  position: absolute;
+		  top: 0px;
+		  right: 0px;
+		  left: 0px;
+		  background-color: rgba(30, 30, 30, 0.9);
+		  padding: 100px 0px;
+		  z-index: 10;
+		  flex-direction: column;
+		  height: 100vh;
+		}
+		#menu-primary-nav-menu li {
+		  text-align: center;
+		  padding-bottom: 30px;
+		}
+		#menu-primary-nav-menu li a {
+			font-size: 40px;
+		    margin: 0px 50%;
+		    color: #179cac;
+		    border-bottom: 1px solid transparent;
+    		display: flex;
+		    transform: translate(-60px);
+		}
+		#menu-primary-nav-menu li a:hover {
+			 border-bottom: 1px solid transparent;
+		}
+}
+

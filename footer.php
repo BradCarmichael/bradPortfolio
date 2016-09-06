@@ -1,6 +1,29 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+        <div class="second-nav-wrap">
+            <div class="second-nav-box">
+                <?php 
+                	wp_nav_menu( array(
+                		'container' => false,
+                		'theme_location' => 'secondary'	
+                	) );
+                 ?>
+               
+            </div>  
+        </div>
+        <div class="email-link-me">
+            <div class="email-link-box">
+             <a href="mailto:brad@bradleycarmichael.com">brad[at]bradleycarmichael.com</a>  
+            </div>
+        </div>
+        <div class="footer-text">
+            <div class="copy-right-box">
+                <p class="copyright">&copy; Developed by Brad Carmichael <?php echo date('Y'); ?></p>
+            </div>
+            <div class="headshot-box">
+                <p class="headshot">Headshot Credit Pam Lau</p>
+            </div>
+        </div>
   </div>
 </footer>
 

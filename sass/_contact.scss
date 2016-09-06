@@ -1,0 +1,129 @@
+
+.contact .main {
+	background-color: white; 
+	h2 {
+		color: black;
+	}
+}
+.contact-form {
+	background-color: white;
+}
+
+// contact form
+.wpcf7-form .your-subject input[type=text], .your-email input[type=email], .your-name input[type=text] {
+		margin: 0 auto;
+}
+
+.wpcf7-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	p {
+		color: $primary;
+		padding-bottom: 20px;
+	}
+	textarea {
+	width: 1000px;
+    height: 100px;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    transition: border .2s;
+	margin-top: 5px;
+	color: $primary;
+	outline-color: $primary;
+    &:hover {
+    	border: 1px solid $primary;
+    }
+}
+
+input {
+	width: 1000px;
+    font-size: 14px;
+    padding: 10px 40px 10px 40px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: border .2s;
+    margin-top: 5px;
+    color: $primary;
+    .your-subject {
+		width: 1000px;
+	}
+	&:hover {
+		border: 1px solid $primary;
+	}
+	&:focus {
+		outline-color: $primary;
+	}
+}
+
+.your-subject input[type=text] {
+	width: 1000px;
+	}
+	input[type=submit] {
+    margin: 30px 0px;
+    width: 140px;
+    background-color: 	#1f1f1f;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold; 
+    transition: background-color .2s; 
+    border-radius: 5px;
+    border: 1px solid 	#1f1f1f;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: flex;
+    -webkit-appearance: none;
+	}
+}
+
+.wpcf7-form-control-wrap {
+	width: 1000px;
+}
+
+input[type=submit]:focus {
+	background-color: #0c4e56;
+	border: 1px solid $primary;
+}
+
+input[type=submit]:active {
+	background-color:   #b0dee3;
+	border: 1px solid $primary;
+	color: black;
+}
+input[type=submit]:hover {
+	background-color:	$primary;
+	border: 1px solid $primary;
+}
+
+@media (max-width: 1030px) {
+	.your-name input[type=text], .your-email input[type=email] {
+	width: 497px;
+	}
+	.wpcf7-form .your-subject input[type=text]{
+		width: 497px;
+	}
+	.wpcf7-form textarea{
+		width: 497px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 550px) {
+		.your-name input[type=text], .your-email input[type=email] {
+		width: 290px;
+		}
+		.wpcf7-form .your-subject input[type=text]{
+			width: 290px;
+		}
+		.wpcf7-form textarea{
+			width: 290px;
+			margin: 0 auto;
+		}
+	}
+
+

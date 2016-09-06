@@ -1,0 +1,143 @@
+
+.portfolio {
+    background-color: $primary;
+    h2 {
+        color: white; 
+    }
+}
+
+.portfolio-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-wrap {
+    padding-bottom: 130px;
+}
+
+.portfolio-wrap:nth-child(3) .portfolio-box {
+    flex-direction: row-reverse;
+    display: flex;
+} 
+
+.portfolio-wrap:nth-child(5) .portfolio-box {
+    flex-direction: row-reverse;
+    display: flex;
+}
+
+.portfolio-content-wrap  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 0px 20px;
+    h2 {
+        color: white;
+    }
+    .portfolio-title {
+        color: white;
+    }
+    p {
+        color: white;
+        .portfolio-short {
+            color: white;
+        }
+    }
+}
+
+.portfolio-image {
+    width: 50%;
+    padding: 60px 20px 0px 20px;
+}
+
+.port-para {
+    padding-top: 20px;
+}
+
+.port-short {
+    padding-top: 20px;
+}
+
+.portfolio-link {
+    padding-top: 50px;
+}
+
+.portfolio-link a {
+    font-family:$font-family-secondary; 
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+    transition: background-color .2s;
+    text-transform: uppercase;
+    
+}
+
+.portfolio-link a:focus {
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #0c4e56;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.portfolio-link a:active {
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 3px;
+    background-color:   #b0dee3;
+    color: $primary;
+    font-size: 16px;
+}
+
+.portfolio-link a:hover {
+    border: 3px solid white;
+    padding: 10px;
+    border-radius:3px;
+    background-color: white;
+    color: $primary;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.portfolio-title {
+    padding-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-image {
+        width: 100%;
+    }
+    .portfolio-wrap:nth-child(2) .portfolio-box {
+    flex-direction: column-reverse;
+    }
+    .portfolio-wrap:nth-child(3) .portfolio-box {
+    flex-direction: column-reverse;
+    } 
+    .portfolio-wrap:nth-child(4) .portfolio-box {
+    flex-direction: column-reverse;
+    }
+    .portfolio-wrap:nth-child(5) .portfolio-box {
+    flex-direction: column-reverse;
+    }
+    .portfolio-content-wrap {
+        width: 100%;
+        text-align: center;
+    }
+    .portfolio-title {
+        padding-top: 40px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .portfolio-content-box h3 {
+        font-size: 27px;
+    }
+}
+
+

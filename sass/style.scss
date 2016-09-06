@@ -13,6 +13,13 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+@import 'vars';
+@import 'front-page';
+@import 'about';
+@import 'skills';
+@import 'portfolio';
+@import 'contact';
+
 /*
 ====================================
 Default Styling
@@ -27,20 +34,75 @@ body {
 	color: #333;
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
 }
 
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+h2 {
+	font-size: $h2;
+	font-family: $font-family-main;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 130px;
+    padding-bottom: 75px;
+    text-transform: uppercase;
+}
+
+
+h3 {
+	font-family: $font-family-main;
+	font-size: $font-large;	
+	font-weight: bold;
+}
+
+h4 {
+	font-family: $font-family-main;
+}
+
+p {
+	color: $text;
+	font-family: $font-family-secondary;
+}
+
+.container {
+	max-width: 1040px;
+	margin: 0 auto;
 }
 
 .full {
 	width: 100%;
 }
+
+.hero {
+	background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+@media (max-width: 480px) {
+	.hero {
+		margin-top: 40px;
+		height: auto;
+		padding: 65px 0;
+		background-attachment: scroll;
+	    background-size: 100%;
+		background-repeat: no-repeat;
+	} 
+	.title-nav-box a {
+		font-size: 16px;
+	}
+	.hamburger {
+		font-size: 25px;
+	}
+	#menu-primary-nav-menu {
+	    padding: 80px 0px;
+	}
+}
+
 
 
 
