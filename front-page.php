@@ -76,7 +76,7 @@
             <div class="container">
               
                   <!-- setting up custom query -->
-                    <h2>Portfolio</h2>
+                    <h2 class="scroll-reveal">Portfolio</h2>
                     <?php 
                     $portfolio = new WP_Query(
                     array(
@@ -129,7 +129,7 @@
     </div> <!-- end.main -->
 </section>
 
-<section class="contact" id="contact">
+<section class="contact scroll-reveal" id="contact">
     <div class="main">
         <div class="container">
             <div class="content">

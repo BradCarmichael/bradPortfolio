@@ -1,9 +1,7 @@
 
-
 .about-container {
 	display: flex;
 }
-
 
 .about-wrap {
 	display: flex;
@@ -40,14 +38,12 @@
     }
 }
 
-/* Portrait tablet and small desktops */
 @media (max-width: 940px) {
     .about-image-box, .about-content-box {
         width: 50%;
     }
 }
 
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     .about-wrap {
         margin-bottom: 0;
@@ -64,7 +60,6 @@
     }
 }
 
-/* Landscape phones and down */
 @media (max-width: 480px) {
     .content h2 {
         font-size: 38px;

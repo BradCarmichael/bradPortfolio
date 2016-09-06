@@ -24,9 +24,9 @@
     	color: white;
     }
     p {
-    font-family: $font-family-secondary;
-	font-size: $font-title-port;
-	color: white;
+        font-family: $font-family-secondary;
+    	font-size: $font-title-port;
+    	color: white;
     }
 }
 
@@ -48,8 +48,7 @@
     }
     .header-text-box p {
         font-size: 25px;
-    }
-    
+    }   
 } 
 
 @media (max-width: 380px) {

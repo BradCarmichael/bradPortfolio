@@ -71,8 +71,7 @@
     color: white;
     font-size: 16px;
     transition: background-color .2s;
-    text-transform: uppercase;
-    
+    text-transform: uppercase; 
 }
 
 .portfolio-link a:focus {
@@ -113,16 +112,16 @@
         width: 100%;
     }
     .portfolio-wrap:nth-child(2) .portfolio-box {
-    flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
     .portfolio-wrap:nth-child(3) .portfolio-box {
-    flex-direction: column-reverse;
+        flex-direction: column-reverse;
     } 
     .portfolio-wrap:nth-child(4) .portfolio-box {
-    flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
     .portfolio-wrap:nth-child(5) .portfolio-box {
-    flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
     .portfolio-content-wrap {
         width: 100%;
@@ -131,7 +130,6 @@
     .portfolio-title {
         padding-top: 40px;
     }
-
 }
 
 @media (max-width: 480px) {

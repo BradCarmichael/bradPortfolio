@@ -11,7 +11,7 @@
 
 // contact form
 .wpcf7-form .your-subject input[type=text], .your-email input[type=email], .your-name input[type=text] {
-		margin: 0 auto;
+	margin: 0 auto;
 }
 
 .wpcf7-form {
@@ -61,6 +61,10 @@ input {
 	}
 }
 
+.wpcf7-text {
+	padding: 10px 10px;
+}
+
 .your-subject input[type=text] {
 	width: 1000px;
 	}
@@ -95,6 +99,7 @@ input[type=submit]:active {
 	border: 1px solid $primary;
 	color: black;
 }
+
 input[type=submit]:hover {
 	background-color:	$primary;
 	border: 1px solid $primary;
@@ -114,16 +119,16 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 550px) {
-		.your-name input[type=text], .your-email input[type=email] {
-		width: 290px;
-		}
-		.wpcf7-form .your-subject input[type=text]{
-			width: 290px;
-		}
-		.wpcf7-form textarea{
-			width: 290px;
-			margin: 0 auto;
-		}
+	.your-name input[type=text], .your-email input[type=email] {
+	width: 290px;
 	}
+	.wpcf7-form .your-subject input[type=text]{
+		width: 290px;
+	}
+	.wpcf7-form textarea{
+		width: 290px;
+		margin: 0 auto;
+	}
+}
 
 

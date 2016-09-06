@@ -56,10 +56,7 @@ function hackeryou_styles(){
 	wp_enqueue_style('devicon', 'https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css');
 
 	wp_enqueue_style('animate', 'https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css');
-
-	wp_enqueue_style('smoothscroll', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js');
-
-	wp_enqueue_style('scrollReveal', 'https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js');
+	
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -88,9 +85,25 @@ function hackeryou_scripts() {
   );
 
   wp_enqueue_script(
+  	'scrollReveal',
+  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js",
+  	array('jquery'), //dependencies
+  	null, //version number
+  	true //load in footer
+  );
+
+   wp_enqueue_script(
+  	'smoothscroll',
+  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js",
+  	array('jquery'), //dependencies
+  	null, //version number
+  	true //load in footer
+  );
+
+  wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
+    array( 'jquery', 'plugins', 'scrollReveal', 'smoothscroll' ), //dependencies
     null, // version number
     true //load in footer
   );
